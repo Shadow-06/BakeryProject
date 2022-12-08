@@ -29,27 +29,7 @@ const Header = (props) => {
           </Link>
         </div>
 
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/donut'>Customize Donut</Link>
-            </li>
-            <li>
-              <Link to='/muffin'>Customize Muffin</Link>
-            </li>
-            <li>
-              <Link to='/cake'>Customize Cake</Link>
-            </li>
-            <li>
-              <Link to='/search'>Search</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <div className='callToActions'>
+        <nav role='navigation'>
           <ul>
             <li>
               <Link to='/cart'>Your Cart ({totalNumCartItems})</Link>
@@ -60,7 +40,7 @@ const Header = (props) => {
                 <Link to='/dashboard'>My Account</Link>
               </li>,
               <li key={2}>
-                <span onClick={() => signOut()}>LogOut</span>
+                <span onClick={() => signOut()}>signOut</span>
               </li>,
             ]}
 
@@ -72,8 +52,28 @@ const Header = (props) => {
                 <Link to='/login'>Login</Link>
               </li>,
             ]}
+            <li>
+              <a href='/search'>Products</a>
+            </li>
+            <li>
+              <a href='#'>Customize</a>
+              <ul class='dropdown'>
+                <li>
+                  <a href='/cake'>Cake</a>
+                </li>
+                <li>
+                  <a href='/muffin'>Muffin</a>
+                </li>
+                <li>
+                  <a href='/donut'>Donut</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href='/'>Home</a>
+            </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
   );

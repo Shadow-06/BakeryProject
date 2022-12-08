@@ -4,28 +4,37 @@ import { OrbitControls, ContactShadows, Environment } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
 import { proxy, useProxy } from 'valtio';
 import { CirclePicker } from 'react-color';
+import { useDispatch } from 'react-redux';
+import { addProduct } from './../../redux/Cart/cart.actions';
+import { Link, useHistory } from 'react-router-dom';
 import './styles.scss';
 import optionStrawberry from './../../assets/Strawberry-PNG.png';
 import optionVanilla from './../../assets/vanilla.jpg';
 import optionMango from './../../assets/mango.jpg';
 import optionChoco from './../../assets//chocolate.jpg';
 import optionOrange from './../../assets/orange.jpg';
+import Button from './../../components/forms/Button';
 
 const state = proxy({
   current: null,
+  productName: 'Customised Cake',
+  customise: true,
+  productThumbnail:
+    'https://cdn.pixabay.com/photo/2016/11/22/18/52/cake-1850011_960_720.jpg',
+  productPrice: 2,
   items: {
-    base: '#AA336A',
-    toping1: '#AA336A',
-    toping2: '#7B3F00',
-    cone1: '#00FF00',
-    cone2: '#00FF00',
-    cone3: '#00FF00',
-    cone4: '#00FF00',
-    ball1: '#FFFF00',
-    ball2: '#FFFF00',
-    ball3: '#FFFF00',
-    ball4: '#FFFF00',
-    board: '#FFCCCB',
+    base: '#FFA500',
+    toping1: '#7B3F00',
+    toping2: '#F4BB44',
+    cone1: '#F3E5AB',
+    cone2: '#F3E5AB',
+    cone3: '#F3E5AB',
+    cone4: '#F3E5AB',
+    ball1: '#FC5A8D',
+    ball2: '#FC5A8D',
+    ball3: '#FC5A8D',
+    ball4: '#FC5A8D',
+    board: '#FC5A8D',
   },
 });
 
@@ -224,7 +233,7 @@ function Picker() {
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = '#332421')}
+            onClick={(color) => (state.items.base = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -318,7 +327,7 @@ function Picker() {
         >
           <button
             color={snap.items.toping1}
-            onClick={(color) => (state.items.toping1 = '#332421')}
+            onClick={(color) => (state.items.toping1 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -412,7 +421,7 @@ function Picker() {
         >
           <button
             color={snap.items.toping2}
-            onClick={(color) => (state.items.toping2 = '#332421')}
+            onClick={(color) => (state.items.toping2 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -506,7 +515,7 @@ function Picker() {
         >
           <button
             color={snap.items.cone1}
-            onClick={(color) => (state.items.cone1 = '#332421')}
+            onClick={(color) => (state.items.cone1 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -600,7 +609,7 @@ function Picker() {
         >
           <button
             color={snap.items.cone2}
-            onClick={(color) => (state.items.cone2 = '#332421')}
+            onClick={(color) => (state.items.cone2 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -694,7 +703,7 @@ function Picker() {
         >
           <button
             color={snap.items.cone3}
-            onClick={(color) => (state.items.cone3 = '#332421')}
+            onClick={(color) => (state.items.cone3 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -788,7 +797,7 @@ function Picker() {
         >
           <button
             color={snap.items.cone4}
-            onClick={(color) => (state.items.cone4 = '#332421')}
+            onClick={(color) => (state.items.cone4 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -882,7 +891,7 @@ function Picker() {
         >
           <button
             color={snap.items.ball1}
-            onClick={(color) => (state.items.ball1 = '#332421')}
+            onClick={(color) => (state.items.ball1 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -976,7 +985,7 @@ function Picker() {
         >
           <button
             color={snap.items.ball2}
-            onClick={(color) => (state.items.ball2 = '#332421')}
+            onClick={(color) => (state.items.ball2 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -1070,7 +1079,7 @@ function Picker() {
         >
           <button
             color={snap.items.ball3}
-            onClick={(color) => (state.items.ball3 = '#332421')}
+            onClick={(color) => (state.items.ball3 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -1164,7 +1173,7 @@ function Picker() {
         >
           <button
             color={snap.items.ball4}
-            onClick={(color) => (state.items.ball4 = '#332421')}
+            onClick={(color) => (state.items.ball4 = '#7B3F00')}
           >
             <img src={optionChoco} data-option='Choco' />
           </button>
@@ -1217,10 +1226,120 @@ function Picker() {
   }
 }
 
+// function Pick() {
+//   const snap = useProxy(state);
+//   if (snap.current === 'base') {
+//     return (
+//       <div
+//         style={{
+//           display: snap.current ? 'block' : 'none',
+//           position: 'relative',
+//           top: '40px',
+//           left: '40px',
+//         }}
+//       >
+//         <h1>{snap.current}</h1>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '40px',
+//             left: '40px',
+//           }}
+//         >
+//           <button onClick={(state.current = 'toping1')}>
+//             <img src={optionStrawberry} data-option='Strawberry' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '40px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.base}
+//             onClick={(color) => (state.items.base = '#F3E5AB')}
+//           >
+//             <img src={optionVanilla} data-option='Vanilla' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '40px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.base}
+//             onClick={(color) => (state.items.base = '#F4BB44')}
+//           >
+//             <img src={optionMango} data-option='Mango' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '40px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.base}
+//             onClick={(color) => (state.items.base = '#7B3F00')}
+//           >
+//             <img src={optionChoco} data-option='Choco' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '40px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.base}
+//             onClick={(color) => (state.items.base = '#FFA500')}
+//           >
+//             <img src={optionOrange} data-option='Orange' />
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+// }
+
 export default function Cake() {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const snap = useProxy(state);
+  
+    const configAddToCartBtn = {
+      type: 'button',
+    };
+  
+    const handleAddToCart = (snap) => {
+      if (!snap) return;
+      dispatch(addProduct(snap));
+      history.push('/cart');
+    };
+  
   return (
     <>
       <Picker />
+      {/* <Pick /> */}
       <Canvas
         concurrent
         pixelRatio={[1, 1.5]}
@@ -1242,6 +1361,9 @@ export default function Cake() {
         </Suspense>
         <OrbitControls />
       </Canvas>
+      <Button {...configAddToCartBtn} onClick={() => handleAddToCart(snap)}>
+        Add to cart
+      </Button>
     </>
   );
 }

@@ -90,7 +90,11 @@ const PaymentDetails = () => {
       return;
     }
 
+   
+
+    
     // const configOrder = {
+    //   customise:true,
     //   orderTotal: total,
     //   orderItems: cartItems.map((item) => {
       
@@ -139,7 +143,7 @@ const PaymentDetails = () => {
 
 
 
-    // dispatch(saveOrderHistory(configOrder));
+    // dispatch(saveOrderHistory(configOrder(Orders)));
  
 
     // const customOrder = cartItems.map((item) => {
@@ -233,56 +237,156 @@ const PaymentDetails = () => {
 
                 
 
-                const configOrder = {
-                  orderTotal: total,
-                  orderItems: cartItems.map((item) => {
+                // const configOrder = {
+                //   orderTotal: total,
+                //   orderItems: cartItems.map((item) => {
                   
-                    let customised= item.customise;
+                //     let customised= item.customise;
                 
-                    debugger;
-                    console.log("hello");
-                    if(customised===true){
+                //     debugger;
+                //     console.log("hello");
+                //     if(customised===true){
+                //       let {
+                //         customise,
+                //         items,
+                //         productThumbnail,
+                //         productName,
+                //         productPrice,
+                //         quantity,
+                //       } = item;
+  
+                //       return {
+                //         customise,
+                //         items,
+                //         productThumbnail,
+                //         productName,
+                //         productPrice,
+                //         quantity,
+                //       };
+                //     }
+                //     let {
+                //       documentID,
+                //       productThumbnail,
+                //       productName,
+                //       productPrice,
+                //       quantity,
+                //     } = item;
+
+                //     return {
+                //       documentID,
+                //       productThumbnail,
+                //       productName,
+                //       productPrice,
+                //       quantity,
+                //     };
+                //   }),
+                // };
+                
+
+                
+                const configOrder=(Orders)=>{
+                  if (Orders){
+                    return   {
+                      customise:true,
+                      orderTotal: total,
+                      orderItems: cartItems.map((item) => {
+                      
+                        let customised= item.customise;
+                    
+                        debugger;
+                        console.log("hello");
+                        if(customised===true){
+                          let {
+                            customise,
+                            items,
+                            productThumbnail,
+                            productName,
+                            productPrice,
+                            quantity,
+                          } = item;
+                
+                          return {
+                            customise,
+                            items,
+                            productThumbnail,
+                            productName,
+                            productPrice,
+                            quantity,
+                          };
+                        }
+                        let {
+                          documentID,
+                          productThumbnail,
+                          productName,
+                          productPrice,
+                          quantity,
+                        } = item;
+                
+                        return {
+                          documentID,
+                          productThumbnail,
+                          productName,
+                          productPrice,
+                          quantity,
+                        };
+                      }),
+                    };
+                
+                  }
+            
+                  return  {
+                    customise:true,
+                    orderTotal: total,
+                    orderItems: cartItems.map((item) => {
+                    
+                      let customised= item.customise;
+                  
+                      debugger;
+                      console.log("hello");
+                      if(customised===true){
+                        let {
+                          customise,
+                          items,
+                          productThumbnail,
+                          productName,
+                          productPrice,
+                          quantity,
+                        } = item;
+              
+                        return {
+                          customise,
+                          items,
+                          productThumbnail,
+                          productName,
+                          productPrice,
+                          quantity,
+                        };
+                      }
                       let {
-                        customise,
-                        items,
+                        documentID,
                         productThumbnail,
                         productName,
                         productPrice,
                         quantity,
                       } = item;
-  
+              
                       return {
-                        customise,
-                        items,
+                        documentID,
                         productThumbnail,
                         productName,
                         productPrice,
                         quantity,
                       };
-                    }
-                    let {
-                      documentID,
-                      productThumbnail,
-                      productName,
-                      productPrice,
-                      quantity,
-                    } = item;
-
-                    return {
-                      documentID,
-                      productThumbnail,
-                      productName,
-                      productPrice,
-                      quantity,
-                    };
-                  }),
-                };
-
+                    }),
+                  };
+              
+            
+                }
                 
+                let Orders = cartItems.find(orders=>orders.customise == true)
 
 
-
-                dispatch(saveOrderHistory(configOrder));
+                dispatch(saveOrderHistory(configOrder(Orders)));
               });
           });
       });

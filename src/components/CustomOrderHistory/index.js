@@ -42,7 +42,7 @@ const formatText = (columnName, columnValue) => {
   }
 };
 
-const AllOrderHistory = ({ orders }) => {
+const CustomisedOrderHistory = ({ orders }) => {
   const history = useHistory();
 
   return (
@@ -71,7 +71,7 @@ const AllOrderHistory = ({ orders }) => {
               return (
                 <TableRow
                   key={pos}
-                  onClick={() => history.push(`/orders/${documentID}`)}
+                  onClick={() => history.push(`/customisedorders/${documentID}`)}
                 >
                   {columns.map((column, pos) => {
                     const columnName = column.id;
@@ -93,4 +93,4 @@ const AllOrderHistory = ({ orders }) => {
   );
 };
 
-export default AllOrderHistory;
+export default CustomisedOrderHistory;

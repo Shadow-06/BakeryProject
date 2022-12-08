@@ -5,26 +5,24 @@ import { checkUserIsAdmin } from './../../Utils';
 import './styles.scss';
 
 const mapState = ({ user }) => ({
-  currentUser: user.currentUser
-})
+  currentUser: user.currentUser,
+});
 
-const AdminToolbar = props => {
+const AdminToolbar = (props) => {
   const { currentUser } = useSelector(mapState);
 
   const isAdmin = checkUserIsAdmin(currentUser);
   if (!isAdmin) return null;
 
   return (
-    <div className="adminToolbar">
+    <div className='adminToolbar'>
       <ul>
         <li>
-          <Link to="/admin">
-            My admin
-          </Link>
+          <Link to='/admin'>Administrator Options</Link>
         </li>
       </ul>
     </div>
   );
-}
+};
 
 export default AdminToolbar;

@@ -10,11 +10,11 @@ export const getUserOrderHistory = uid => ({
   payload: uid
 });
 export const getAllUserOrderHistory = () => ({
-  type: ordersTypes.GET_USER_ORDER_HISTORY_START,
+  type: ordersTypes.GET_ALL_USER_ORDER_HISTORY_START,
   
 });
 export const getCustomUserOrderHistory = () => ({
-  type: ordersTypes.GET_USER_ORDER_HISTORY_START,
+  type: ordersTypes.GET_CUSTOM_USER_ORDER_HISTORY_START,
   
 });
 
@@ -26,6 +26,11 @@ export const setUserOrderHistory = history => ({
 
 export const getOrderDetailsStart = orderID => ({
   type: ordersTypes.GET_ORDER_DETAILS_START,
+  payload: orderID
+});
+
+export const getCustomOrderDetailsStart = orderID => ({
+  type: ordersTypes.GET_CUSTOM_ORDER_DETAILS_START,
   payload: orderID
 });
 

@@ -43,7 +43,9 @@ const formatText = (columnName, columnValue) => {
 
 const OrderDetails = ({ order }) => {
   const dispatch = useDispatch();
+  
   const orderItems = order && order.orderItems;
+ 
 
   useEffect(() => {
     return () => {
@@ -52,6 +54,8 @@ const OrderDetails = ({ order }) => {
       );
     }
   }, []);
+
+  
 
   return (
     <TableContainer>

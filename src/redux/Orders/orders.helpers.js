@@ -73,8 +73,10 @@ export const handleGetCustomUserOrderHistory = () => {
   return new Promise((resolve, reject) => {
     let ref = firestore.collection('orders').orderBy('orderCreatedDate');
     
-
-    ref
+    ref = ref.where('customise', '==', true);
+    
+    
+        ref
       .get()
       .then(snap => {
         const data = [
@@ -114,5 +116,33 @@ export const handleGetOrder = orderID => {
       .catch(err => {
         reject(err);
       })
+  })
+}
+
+export const handleCustomGetOrder = orderID => {
+  return new Promise((resolve, reject) => {
+    let ref = firestore.collection('orders').doc(orderID);
+    
+    ref = ref.where('customise', '==', true);
+
+
+    ref
+      .get()
+      .then(snap => {
+        const data = [
+          ...snap.docs.map(doc => {
+            return {
+              ...doc.data(),
+              documentID: orderID
+            }
+          })
+        ];
+
+        resolve({ data });
+      })
+      .catch(err => {
+        reject(err);
+      });
+
   })
 }

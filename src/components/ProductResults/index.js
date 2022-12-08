@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
-import { fetchProductsStart } from "../../redux/Products/products.actions";
-import Product from "./Product";
-import FormSelect from "../forms/FormSelect";
-import LoadMore from "../LoadMore";
-import "./styles.scss";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router-dom';
+import { fetchProductsStart } from '../../redux/Products/products.actions';
+import Product from './Product';
+import FormSelect from '../forms/FormSelect';
+import LoadMore from '../LoadMore';
+import './styles.scss';
 
 const mapState = ({ productsData }) => ({
   products: productsData.products,
@@ -31,7 +31,7 @@ const ProductResults = ({}) => {
   if (!Array.isArray(data)) return null;
   if (data.length < 1) {
     return (
-      <div className="products">
+      <div className='products'>
         <p>No search results.</p>
       </div>
     );
@@ -41,16 +41,20 @@ const ProductResults = ({}) => {
     defaultValue: filterType,
     options: [
       {
-        name: "Show all",
-        value: "",
+        name: 'Show all',
+        value: '',
       },
       {
-        name: "Muffins",
-        value: "muffins",
+        name: 'Muffins',
+        value: 'muffins',
       },
       {
-        name: "Cakes",
-        value: "cakes",
+        name: 'Cakes',
+        value: 'cakes',
+      },
+      {
+        name: 'Donuts',
+        value: 'donuts',
       },
     ],
     handleChange: handleFilter,
@@ -71,18 +75,18 @@ const ProductResults = ({}) => {
   };
 
   return (
-    <div className="products">
+    <div className='products'>
       <h1>Browse Products</h1>
 
       <FormSelect {...configFilters} />
 
-      <div className="productResults">
+      <div className='productResults'>
         {data.map((product, pos) => {
           const { productThumbnail, productName, productPrice } = product;
           if (
             !productThumbnail ||
             !productName ||
-            typeof productPrice === "undefined"
+            typeof productPrice === 'undefined'
           )
             return null;
 

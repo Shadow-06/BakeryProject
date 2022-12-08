@@ -132,3 +132,469 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2022-12-07T10:44:33.298Z] [worker-us-central1-api-83f6693f-44a6-4da5-9a56-16b2740d45c6]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-83f6693f-44a6-4da5-9a56-16b2740d45c6]: IDLE"}}
 [debug] [2022-12-07T10:44:33.298Z] [work-queue] {"queueLength":0,"workRunningCount":0}
 [info] i  functions: Finished "api" in 507.1386ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 507.1386ms"}}
+[debug] [2022-12-08T05:46:09.349Z] ----------------------------------------------------------------------
+[debug] [2022-12-08T05:46:09.350Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ramit\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2022-12-08T05:46:09.351Z] CLI Version:   11.16.1
+[debug] [2022-12-08T05:46:09.351Z] Platform:      win32
+[debug] [2022-12-08T05:46:09.351Z] Node Version:  v18.4.0
+[debug] [2022-12-08T05:46:09.352Z] Time:          Thu Dec 08 2022 00:46:09 GMT-0500 (Eastern Standard Time)
+[debug] [2022-12-08T05:46:09.353Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-08T05:46:09.356Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-08T05:46:09.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-08T05:46:09.495Z] > authorizing via signed-in user (ramithraveendran10@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-12-08T05:46:09.505Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4003 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4003 instead."}}
+[debug] [2022-12-08T05:46:09.507Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4003},{"address":"::1","family":"IPv6","port":4003}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project dbakery-32b9f. This may result in unexpected behavior. 
+[debug] [2022-12-08T05:46:09.526Z] [hub] writing locator at C:\Users\ramit\AppData\Local\Temp\hub-dbakery-32b9f.json
+[debug] [2022-12-08T05:46:09.618Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-08T05:46:09.618Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-08T05:46:09.619Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4003},{"address":"::1","family":"IPv6","port":4003}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-12-08T05:46:09.690Z] defaultcredentials: writing to file C:\Users\ramit\AppData\Roaming\firebase\ramithraveendran10_gmail_com_application_default_credentials.json
+[debug] [2022-12-08T05:46:09.755Z] Setting GAC to C:\Users\ramit\AppData\Roaming\firebase\ramithraveendran10_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ramit\\AppData\\Roaming\\firebase\\ramithraveendran10_gmail_com_application_default_credentials.json"}}
+[debug] [2022-12-08T05:46:09.757Z] > refreshing access token with scopes: []
+[debug] [2022-12-08T05:46:09.758Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-08T05:46:09.758Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-08T05:46:09.775Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-08T05:46:09.775Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-12-08T05:46:09.934Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-08T05:46:09.934Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-08T05:46:09.944Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig [none]
+[debug] [2022-12-08T05:46:10.261Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig 200
+[debug] [2022-12-08T05:46:10.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig {"projectId":"dbakery-32b9f","storageBucket":"dbakery-32b9f.appspot.com","locationId":"us-central"}
+[debug] [2022-12-08T05:46:10.293Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-08T05:46:10.293Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-08T05:46:10.294Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\ramit\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\ramit\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-12-08T05:46:10.513Z] Web / API server started at 127.0.0.1:4003
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4003\n"}}
+[debug] [2022-12-08T05:46:10.513Z] Web / API server started at ::1:4003
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4003\n"}}
+[info] i  functions: Watching "C:\Users\ramit\OneDrive\BakeryProject\BakeryProject\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\" for Cloud Functions..."}}
+[debug] [2022-12-08T05:46:10.589Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-08T05:46:15.972Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.15.0",
+    "@stripe/stripe-js": "^1.44.1",
+    "axios": "^1.2.0",
+    "cors": "^2.8.5",
+    "expres": "^0.0.5",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "react-country-region-selector": "^3.6.1",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-08T05:46:15.972Z] Building nodejs source
+[debug] [2022-12-08T05:46:15.972Z] Analyzing nodejs backend spec
+[debug] [2022-12-08T05:46:15.973Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-08T05:46:16.578Z] Serving at port 9005
+
+[debug] [2022-12-08T05:46:16.828Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-08T05:46:16.838Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/dbakery-32b9f/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/dbakery-32b9f/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4003/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4003/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-12-08T05:46:20.923Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:46:20.923Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:46:20.924Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:46:20.930Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:46:20.930Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:46:20.945Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-12-08T05:46:20.945Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2022-12-08T05:46:22.284Z] [runtime-status] [4136] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.286Z] [runtime-status] [4136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.287Z] [runtime-status] [4136] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-12-08T05:46:22.287Z] [runtime-status] [4136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.340Z] [runtime-status] [4136] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-12-08T05:46:22.341Z] [runtime-status] [4136] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T05:46:22.342Z] [runtime-status] [4136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.344Z] [runtime-status] [4136] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.345Z] [runtime-status] [4136] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T05:46:22.345Z] [runtime-status] [4136] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T05:46:22.581Z] [runtime-status] [4136] Functions runtime initialized. {"cwd":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions","node_version":"18.4.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\",\"node_version\":\"18.4.0\"}"}}
+[debug] [2022-12-08T05:46:22.581Z] [runtime-status] [4136] Listening to port: \\?\pipe\fire_emu_8480df63bf55fd10 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [4136] Listening to port: \\\\?\\pipe\\fire_emu_8480df63bf55fd10"}}
+[debug] [2022-12-08T05:46:22.588Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:22.588Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:46:22.588Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T05:46:22.595Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:22.596Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "api" in 2.8247ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 2.8247ms"}}
+[debug] [2022-12-08T05:46:22.598Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:46:22.599Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:46:22.599Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:46:22.605Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:46:22.606Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:46:22.606Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:46:22.606Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T05:46:23.129Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:23.129Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "api" in 478.9465ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 478.9465ms"}}
+[debug] [2022-12-08T05:46:45.532Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:46:45.533Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:46:45.533Z] Accepted request GET /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:46:45.550Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:46:45.550Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:46:45.551Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:46:45.551Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T05:46:45.554Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:45.555Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "api" in 1.1658ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 1.1658ms"}}
+[debug] [2022-12-08T05:46:45.914Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2022-12-08T05:46:58.031Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:46:58.031Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:46:58.031Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:46:58.037Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:46:58.037Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:46:58.037Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:46:58.037Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T05:46:58.043Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:58.044Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "api" in 1.0897ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 1.0897ms"}}
+[debug] [2022-12-08T05:46:58.048Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:46:58.049Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:46:58.049Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:46:58.057Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:46:58.058Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:46:58.058Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:46:58.058Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T05:46:58.336Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: IDLE"}}
+[debug] [2022-12-08T05:46:58.336Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "api" in 274.3238ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 274.3238ms"}}
+[debug] [2022-12-08T05:53:19.839Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-08T05:53:19.843Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-08T05:53:19.844Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T05:53:19.907Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T05:53:19.908Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T05:53:19.909Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T05:53:19.909Z] [worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-e35acb85-3f4d-4298-bb1a-eced116bf417]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] i  functions: Finished "api" in 7.7918ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 7.7918ms"}}
+[debug] [2022-12-08T06:23:07.944Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-12-08T06:23:07.949Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-12-08T06:23:07.950Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:23:08.055Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:23:08.058Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:23:08.184Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-12-08T06:23:08.188Z] [worker-pool] Adding worker with key us-central1-api, total=2 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=2"}}
+[debug] [2022-12-08T06:23:11.762Z] [runtime-status] [16976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.765Z] [runtime-status] [16976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.766Z] [runtime-status] [16976] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-12-08T06:23:11.766Z] [runtime-status] [16976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.927Z] [runtime-status] [16976] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-12-08T06:23:11.930Z] [runtime-status] [16976] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T06:23:11.934Z] [runtime-status] [16976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.936Z] [runtime-status] [16976] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.937Z] [runtime-status] [16976] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:23:11.940Z] [runtime-status] [16976] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T06:23:12.744Z] [runtime-status] [16976] Functions runtime initialized. {"cwd":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions","node_version":"18.4.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\",\"node_version\":\"18.4.0\"}"}}
+[debug] [2022-12-08T06:23:12.745Z] [runtime-status] [16976] Listening to port: \\?\pipe\fire_emu_49c71d45618d447f {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [16976] Listening to port: \\\\?\\pipe\\fire_emu_49c71d45618d447f"}}
+[debug] [2022-12-08T06:23:12.851Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE"}}
+[debug] [2022-12-08T06:23:12.852Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:23:12.853Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:23:12.880Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE"}}
+[debug] [2022-12-08T06:23:12.881Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "api" in 7.4497ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 7.4497ms"}}
+[debug] [2022-12-08T06:23:12.887Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-12-08T06:23:12.888Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-12-08T06:23:12.888Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:23:12.903Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:23:12.903Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:23:12.903Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:23:12.903Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:23:13.578Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: IDLE"}}
+[debug] [2022-12-08T06:23:13.578Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "api" in 621.4172ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 621.4172ms"}}
+[debug] [2022-12-08T06:28:59.312Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2022-12-08T06:28:59.324Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-12-08T06:28:59.325Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:28:59.401Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:28:59.402Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:28:59.404Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:28:59.405Z] [worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-23a7c189-a688-4ed8-8395-cc5eb162324c]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] i  functions: Finished "api" in 27.928ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 27.928ms"}}
+[debug] [2022-12-08T06:52:38.246Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:52:38.267Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:52:38.282Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:52:38.402Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:52:38.404Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:52:38.510Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-12-08T06:52:38.511Z] [worker-pool] Adding worker with key us-central1-api, total=3 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=3"}}
+[debug] [2022-12-08T06:52:44.550Z] [runtime-status] [15236] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.554Z] [runtime-status] [15236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.557Z] [runtime-status] [15236] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-12-08T06:52:44.557Z] [runtime-status] [15236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.707Z] [runtime-status] [15236] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-12-08T06:52:44.708Z] [runtime-status] [15236] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T06:52:44.708Z] [runtime-status] [15236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.710Z] [runtime-status] [15236] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.712Z] [runtime-status] [15236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-12-08T06:52:44.713Z] [runtime-status] [15236] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-12-08T06:52:45.309Z] [runtime-status] [15236] Functions runtime initialized. {"cwd":"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions","node_version":"18.4.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\ramit\\\\OneDrive\\\\BakeryProject\\\\BakeryProject\\\\functions\",\"node_version\":\"18.4.0\"}"}}
+[debug] [2022-12-08T06:52:45.316Z] [runtime-status] [15236] Listening to port: \\?\pipe\fire_emu_9f88a9d9bf3432bd {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15236] Listening to port: \\\\?\\pipe\\fire_emu_9f88a9d9bf3432bd"}}
+[debug] [2022-12-08T06:52:45.374Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:52:45.374Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:52:45.374Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:52:45.392Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:52:45.393Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 2.7445ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 2.7445ms"}}
+[debug] [2022-12-08T06:52:45.398Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:52:45.399Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:52:45.399Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:52:45.412Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:52:45.413Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:52:45.413Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:52:45.413Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:52:46.071Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:52:46.071Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 618.3347ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 618.3347ms"}}
+[debug] [2022-12-08T06:55:58.345Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:55:58.346Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:55:58.347Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:55:58.375Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:55:58.376Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:55:58.376Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:55:58.376Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:55:58.384Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:55:58.384Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 0.7334ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 0.7334ms"}}
+[debug] [2022-12-08T06:55:58.387Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:55:58.387Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:55:58.387Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:55:58.393Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:55:58.393Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:55:58.393Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:55:58.393Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:55:58.746Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:55:58.746Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 346.5943ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 346.5943ms"}}
+[debug] [2022-12-08T06:56:20.832Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:56:20.834Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:56:20.834Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:56:20.843Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:56:20.844Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:56:20.854Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:56:20.854Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:56:20.859Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:56:20.860Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 1.0059ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 1.0059ms"}}
+[debug] [2022-12-08T06:56:20.863Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T06:56:20.863Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T06:56:20.863Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T06:56:20.871Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T06:56:20.871Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T06:56:20.872Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T06:56:20.872Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T06:56:21.149Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T06:56:21.149Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 274.3062ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 274.3062ms"}}
+[debug] [2022-12-08T08:43:51.240Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:43:51.247Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:43:51.247Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:43:51.306Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:43:51.310Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:43:51.312Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:43:51.314Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T08:43:51.379Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:43:51.379Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 7.8269ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 7.8269ms"}}
+[debug] [2022-12-08T08:43:51.382Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:43:51.382Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:43:51.383Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:43:51.392Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:43:51.392Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:43:51.393Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:43:51.393Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T08:43:51.800Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:43:51.801Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 396.9659ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 396.9659ms"}}
+[debug] [2022-12-08T08:53:18.582Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:53:18.586Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:53:18.586Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:53:18.655Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:53:18.657Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:53:18.657Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:53:18.657Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[info] i  functions: Finished "api" in 8.2129ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 8.2129ms"}}
+[debug] [2022-12-08T08:53:18.727Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:53:18.727Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2022-12-08T08:53:18.728Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:53:18.728Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:53:18.728Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:53:18.741Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:53:18.741Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:53:18.742Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:53:18.742Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T08:53:19.244Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:53:19.244Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 488.537ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 488.537ms"}}
+[debug] [2022-12-08T08:59:28.387Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:59:28.389Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:59:28.389Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:59:28.407Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:59:28.408Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:59:28.408Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:59:28.408Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T08:59:28.445Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:59:28.445Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 31.5696ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 31.5696ms"}}
+[debug] [2022-12-08T08:59:28.447Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T08:59:28.448Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T08:59:28.448Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T08:59:28.460Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T08:59:28.461Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T08:59:28.461Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T08:59:28.461Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T08:59:28.840Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T08:59:28.840Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 375.6406ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 375.6406ms"}}
+[debug] [2022-12-08T10:25:36.121Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T10:25:36.126Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T10:25:36.126Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T10:25:36.162Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T10:25:36.163Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T10:25:36.163Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T10:25:36.164Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T10:25:36.205Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T10:25:36.205Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 2.1231ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 2.1231ms"}}
+[debug] [2022-12-08T10:25:36.215Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T10:25:36.215Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T10:25:36.215Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T10:25:36.222Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T10:25:36.222Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T10:25:36.223Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T10:25:36.223Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T10:25:36.621Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T10:25:36.622Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 394.4544ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 394.4544ms"}}
+[debug] [2022-12-08T12:56:16.185Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T12:56:16.189Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T12:56:16.189Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T12:56:16.252Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T12:56:16.253Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T12:56:16.254Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T12:56:16.254Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T12:56:16.314Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T12:56:16.315Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 3.912ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 3.912ms"}}
+[debug] [2022-12-08T12:56:16.321Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T12:56:16.322Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T12:56:16.322Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T12:56:16.332Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T12:56:16.332Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T12:56:16.332Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T12:56:16.332Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T12:56:16.721Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T12:56:16.721Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 381.9634ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 381.9634ms"}}
+[debug] [2022-12-08T15:17:58.758Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T15:17:58.790Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T15:17:58.796Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T15:17:58.992Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T15:17:58.997Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T15:17:59.003Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T15:17:59.004Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T15:17:59.194Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T15:17:59.194Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 51.514ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 51.514ms"}}
+[debug] [2022-12-08T15:17:59.202Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T15:17:59.203Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T15:17:59.203Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T15:17:59.234Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T15:17:59.235Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T15:17:59.235Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T15:17:59.235Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T15:17:59.661Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T15:17:59.661Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 410.1538ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 410.1538ms"}}
+[debug] [2022-12-08T15:18:11.196Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T15:18:11.196Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T15:18:11.196Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T15:18:11.205Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T15:18:11.205Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T15:18:11.205Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T15:18:11.205Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T15:18:11.225Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T15:18:11.225Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 1.0195ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 1.0195ms"}}
+[debug] [2022-12-08T15:18:11.228Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-08T15:18:11.228Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-08T15:18:11.228Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-08T15:18:11.236Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-08T15:18:11.237Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-08T15:18:11.237Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-08T15:18:11.237Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-08T15:18:11.530Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-08T15:18:11.531Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 290.0054ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 290.0054ms"}}

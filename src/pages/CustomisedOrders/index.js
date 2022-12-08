@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCustomUserOrderHistory } from "../../redux/Orders/orders.actions";
-import AllOrderHistory from "../../components/AllOrderHistory";
+import CustomOrderHistory from "../../components/CustomOrderHistory";
 import "./styles.scss";
 
 const mapState = ({ ordersData }) => ({
@@ -20,7 +20,7 @@ const Customisedorders = props => {
     <div>
       <h1>Order History</h1>
 
-      <AllOrderHistory orders={orderHistory} />
+      <CustomOrderHistory orders={orderHistory} />
     </div>
   );
 };

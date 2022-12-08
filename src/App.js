@@ -34,6 +34,7 @@ import Donut from "./pages/Donut";
 import Cake from "./pages/Cake";
 import Orders from "./pages/Orders";
 import CustomOrders from "./pages/CustomisedOrders";
+import CustomisedOrder from "./pages/CustomisedOrder";
 import "./default.scss";
 
 const App = (props) => {
@@ -183,6 +184,16 @@ const App = (props) => {
             <WithAdminAuth>
               <AdminLayout>
                 <CustomOrders />
+              </AdminLayout>
+            </WithAdminAuth>
+          )}
+        />
+         <Route
+          path="/customisedorders/:orderID"
+          render={() => (
+            <WithAdminAuth>
+              <AdminLayout>
+                <CustomisedOrder />
               </AdminLayout>
             </WithAdminAuth>
           )}

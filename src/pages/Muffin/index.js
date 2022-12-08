@@ -1,30 +1,39 @@
-import { useRef, useState, Suspense, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, ContactShadows, Environment } from "@react-three/drei";
-import { useGLTF } from "@react-three/drei";
-import { proxy, useProxy } from "valtio";
-import { CirclePicker } from "react-color";
-import "./styles.scss";
-import optionStrawberry from "./../../assets/Strawberry-PNG.png";
-import optionVanilla from "./../../assets/vanilla.jpg";
-import optionMango from "./../../assets/mango.jpg";
-import optionChoco from "./../../assets//chocolate.jpg";
-import optionOrange from "./../../assets/orange.jpg";
+import { useRef, useState, Suspense, useEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, ContactShadows, Environment } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
+import { proxy, useProxy } from 'valtio';
+import { CirclePicker } from 'react-color';
+import { useDispatch } from 'react-redux';
+import { addProduct } from './../../redux/Cart/cart.actions';
+import { Link, useHistory } from 'react-router-dom';
+import './styles.scss';
+import optionStrawberry from './../../assets/Strawberry-PNG.png';
+import optionVanilla from './../../assets/vanilla.jpg';
+import optionMango from './../../assets/mango.jpg';
+import optionChoco from './../../assets//chocolate.jpg';
+import optionOrange from './../../assets/orange.jpg';
+import Button from './../../components/forms/Button';
 
 const state = proxy({
   current: null,
+  productName: 'Customised Muffin',
+  customise: true,
+  productThumbnail:
+    'https://cdn.pixabay.com/photo/2016/11/22/18/52/cake-1850011_960_720.jpg',
+  productPrice: 3,
   items: {
-    base: "#CD7F32",
-    icing: "#AA336A",
-    wrapper: "#ffffff",
-    Sprinkles: "#ykasff",
+    base: '#F4BB44',
+    icing: '#F3E5AB',
+    wrapper: '#FC5A8D',
+    Sprinkles: '#FFA500',
   },
 });
 
 function Muffin1(props) {
   const ref = useRef();
   const snap = useProxy(state);
-  const { nodes, materials } = useGLTF("/cupcake.glb");
+  const { nodes, materials } = useGLTF('/cupcake.glb');
 
   // useFrame((state) => {
   //   const t = state.clock.getElapsedTime();
@@ -415,213 +424,213 @@ function Muffin1(props) {
 }
 function Picker() {
   const snap = useProxy(state);
-  if (snap.current === "base") {
+  if (snap.current === 'base') {
     return (
       <div
         style={{
-          display: snap.current ? "block" : "none",
-          position: "relative",
-          top: "10px",
-          left: "40px",
+          display: snap.current ? 'block' : 'none',
+          position: 'relative',
+          top: '10px',
+          left: '40px',
         }}
       >
         <h1>{snap.current}</h1>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = "#FC5A8D")}
+            onClick={(color) => (state.items.base = '#FC5A8D')}
           >
-            <img src={optionStrawberry} data-option="Strawberry" />
+            <img src={optionStrawberry} data-option='Strawberry' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = "#F3E5AB")}
+            onClick={(color) => (state.items.base = '#F3E5AB')}
           >
-            <img src={optionVanilla} data-option="Vanilla" />
+            <img src={optionVanilla} data-option='Vanilla' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = "#F4BB44")}
+            onClick={(color) => (state.items.base = '#F4BB44')}
           >
-            <img src={optionMango} data-option="Mango" />
+            <img src={optionMango} data-option='Mango' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = "#332421")}
+            onClick={(color) => (state.items.base = '#7B3F00')}
           >
-            <img src={optionChoco} data-option="Choco" />
+            <img src={optionChoco} data-option='Choco' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.base}
-            onClick={(color) => (state.items.base = "#FFA500")}
+            onClick={(color) => (state.items.base = '#FFA500')}
           >
-            <img src={optionOrange} data-option="Orange" />
+            <img src={optionOrange} data-option='Orange' />
           </button>
         </div>
       </div>
     );
   }
-  if (snap.current === "icing") {
+  if (snap.current === 'icing') {
     return (
       <div
         style={{
-          display: snap.current ? "block" : "none",
-          position: "relative",
-          top: "10px",
-          left: "40px",
+          display: snap.current ? 'block' : 'none',
+          position: 'relative',
+          top: '10px',
+          left: '40px',
         }}
       >
         <h1>{snap.current}</h1>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.icing}
-            onClick={(color) => (state.items.icing = "#FC5A8D")}
+            onClick={(color) => (state.items.icing = '#FC5A8D')}
           >
-            <img src={optionStrawberry} data-option="Strawberry" />
+            <img src={optionStrawberry} data-option='Strawberry' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.icing}
-            onClick={(color) => (state.items.icing = "#F3E5AB")}
+            onClick={(color) => (state.items.icing = '#F3E5AB')}
           >
-            <img src={optionVanilla} data-option="Vanilla" />
+            <img src={optionVanilla} data-option='Vanilla' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.icing}
-            onClick={(color) => (state.items.icing = "#F4BB44")}
+            onClick={(color) => (state.items.icing = '#F4BB44')}
           >
-            <img src={optionMango} data-option="Mango" />
+            <img src={optionMango} data-option='Mango' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.icing}
-            onClick={(color) => (state.items.icing = "#332421")}
+            onClick={(color) => (state.items.icing = '#7B3F00')}
           >
-            <img src={optionChoco} data-option="Choco" />
+            <img src={optionChoco} data-option='Choco' />
           </button>
         </div>
         <div
-          class="options"
+          class='options'
           style={{
-            display: snap.current ? "block" : "none",
-            position: "relative",
-            top: "10px",
-            left: "40px",
+            display: snap.current ? 'block' : 'none',
+            position: 'relative',
+            top: '10px',
+            left: '40px',
           }}
         >
           <button
             color={snap.items.icing}
-            onClick={(color) => (state.items.icing = "#FFA500")}
+            onClick={(color) => (state.items.icing = '#FFA500')}
           >
-            <img src={optionOrange} data-option="Orange" />
+            <img src={optionOrange} data-option='Orange' />
           </button>
         </div>
       </div>
     );
   }
-  if (snap.current === "wrapper") {
+  if (snap.current === 'wrapper') {
     return (
       <div
         style={{
-          display: snap.current ? "block" : "none",
-          position: "relative",
-          top: "20px",
-          left: "500px",
+          display: snap.current ? 'block' : 'none',
+          position: 'relative',
+          top: '20px',
+          left: '500px',
         }}
       >
         <h1>{snap.current}</h1>
         <CirclePicker
           colors={[
-            "#fff",
-            "#abdee6",
-            "#cbaacb",
-            "#ffffb5",
-            "#ffccb6",
-            "#f3b0c3",
+            '#fff',
+            '#abdee6',
+            '#cbaacb',
+            '#ffffb5',
+            '#ffccb6',
+            '#f3b0c3',
           ]}
           color={snap.items.wrapper}
           onChange={(color) => (state.items.wrapper = color.hex)}
@@ -629,25 +638,25 @@ function Picker() {
       </div>
     );
   }
-  if (snap.current === "Sprinkles") {
+  if (snap.current === 'Sprinkles') {
     return (
       <div
         style={{
-          display: snap.current ? "block" : "none",
-          position: "relative",
-          top: "20px",
-          left: "500px",
+          display: snap.current ? 'block' : 'none',
+          position: 'relative',
+          top: '20px',
+          left: '500px',
         }}
       >
         <h1>{snap.current}</h1>
         <CirclePicker
           colors={[
-            "#fff",
-            "#abdee6",
-            "#cbaacb",
-            "#ffffb5",
-            "#ffccb6",
-            "#f3b0c3",
+            '#fff',
+            '#abdee6',
+            '#cbaacb',
+            '#ffffb5',
+            '#ffccb6',
+            '#f3b0c3',
           ]}
           color={snap.items.Sprinkles}
           onChange={(color) => (state.items.Sprinkles = color.hex)}
@@ -658,6 +667,19 @@ function Picker() {
 }
 
 export default function Muffin() {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const snap = useProxy(state);
+
+  const configAddToCartBtn = {
+    type: 'button',
+  };
+
+  const handleAddToCart = (snap) => {
+    if (!snap) return;
+    dispatch(addProduct(snap));
+    history.push('/cart');
+  };
   return (
     <>
       <Picker />
@@ -678,6 +700,9 @@ export default function Muffin() {
         </Suspense>
         <OrbitControls />
       </Canvas>
+      <Button {...configAddToCartBtn} onClick={() => handleAddToCart(snap)}>
+        Add to cart
+      </Button>
     </>
   );
 }

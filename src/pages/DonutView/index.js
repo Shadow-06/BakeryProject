@@ -2,36 +2,35 @@ import { useRef, useState, Suspense, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, ContactShadows, Environment } from '@react-three/drei';
 import { useGLTF } from '@react-three/drei';
-import { proxy, useProxy } from 'valtio';
-import { CirclePicker } from 'react-color';
-import { useDispatch } from 'react-redux';
-import { addProduct } from './../../redux/Cart/cart.actions';
-import { Link, useHistory } from 'react-router-dom';
-import './styles.scss';
-import optionStrawberry from './../../assets/Strawberry-PNG.png';
-import optionVanilla from './../../assets/vanilla.jpg';
-import optionMango from './../../assets/mango.jpg';
-import optionChoco from './../../assets//chocolate.jpg';
-import optionOrange from './../../assets/orange.jpg';
-import Button from './../../components/forms/Button';
 
-const state = proxy({
-  current: null,
-  productName: 'Customised Donut',
-  customise: true,
-  productThumbnail:
-    'https://cdn.pixabay.com/photo/2016/11/22/18/52/cake-1850011_960_720.jpg',
-  productPrice: 2,
-  items: {
-    name: 'Customised Donut',
-    Base: '#FFA500',
-    Top: '#7B3F00',
-    Sprinkles: '#F4BB44',
-  },
-});
+import { useParams } from 'react-router-dom';
+import { getOrderDetailsStart } from './../../redux/Orders/orders.actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { proxy, useProxy } from 'valtio';
+import { Link, useHistory } from 'react-router-dom';
+import { setOrderDetails } from './../../redux/Orders/orders.actions';
+import './styles.scss';
+
+
 
 function Donut1(props) {
   // const snapref = useRef();
+
+  const OrderDetails = ({ order }) => {
+    const dispatch = useDispatch();
+    const history = useHistory();
+    const orderItems = order && order.orderItems;
+    const {Items} = orderItems
+
+  useEffect(() => {
+
+    dispatch(
+        setOrderDetails({})
+    );
+
+  }, []);
+
+//   const 
 
   const ref = useRef();
 
@@ -299,242 +298,234 @@ function Donut1(props) {
   );
 }
 
-function Picker() {
-  const snap = useProxy(state);
-  if (snap.current === 'Top') {
-    return (
-      <div
-        style={{
-          display: snap.current ? 'block' : 'none',
-          position: 'relative',
-          top: '10px',
-          left: '40px',
-        }}
-      >
-        <h1>{snap.current}</h1>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Top}
-            onClick={(color) => (state.items.Top = '#FC5A8D')}
-          >
-            <img src={optionStrawberry} data-option='Strawberry' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Top}
-            onClick={(color) => (state.items.Top = '#F3E5AB')}
-          >
-            <img src={optionVanilla} data-option='Vanilla' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Top}
-            onClick={(color) => (state.items.Top = '#F4BB44')}
-          >
-            <img src={optionMango} data-option='Mango' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Top}
-            onClick={(color) => (state.items.Top = '#7B3F00')}
-          >
-            <img src={optionChoco} data-option='Choco' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Top}
-            onClick={(color) => (state.items.Top = '#FFA500')}
-          >
-            <img src={optionOrange} data-option='Orange' />
-          </button>
-        </div>
-      </div>
-    );
-  }
-  if (snap.current === 'Base') {
-    return (
-      <div
-        style={{
-          display: snap.current ? 'block' : 'none',
-          position: 'relative',
-          top: '10px',
-          left: '40px',
-        }}
-      >
-        <h1>{snap.current}</h1>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Base}
-            onClick={(color) => (state.items.Base = '#FC5A8D')}
-          >
-            <img src={optionStrawberry} data-option='Strawberry' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Base}
-            onClick={(color) => (state.items.Base = '#F3E5AB')}
-          >
-            <img src={optionVanilla} data-option='Vanilla' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Base}
-            onClick={(color) => (state.items.Base = '#F4BB44')}
-          >
-            <img src={optionMango} data-option='Mango' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Base}
-            onClick={(color) => (state.items.Base = '#7B3F00')}
-          >
-            <img src={optionChoco} data-option='Choco' />
-          </button>
-        </div>
-        <div
-          class='options'
-          style={{
-            display: snap.current ? 'block' : 'none',
-            position: 'relative',
-            top: '10px',
-            left: '40px',
-          }}
-        >
-          <button
-            color={snap.items.Base}
-            onClick={(color) => (state.items.Base = '#FFA500')}
-          >
-            <img src={optionOrange} data-option='Orange' />
-          </button>
-        </div>
-      </div>
-    );
-  }
-  if (snap.current === 'Sprinkles') {
-    return (
-      <div
-        style={{
-          display: snap.current ? 'block' : 'none',
-          position: 'relative',
-          top: '20px',
-          left: '500px',
-        }}
-      >
-        <h1>{snap.current}</h1>
-        <CirclePicker
-          colors={[
-            '#fff',
-            '#abdee6',
-            '#cbaacb',
-            '#ffffb5',
-            '#ffccb6',
-            '#f3b0c3',
-          ]}
-          color={snap.items.Sprinkles}
-          onChange={(color) => (state.items.Sprinkles = color.hex)}
-        />
-      </div>
-    );
-  }
-}
+// function Picker() {
+//   const snap = useProxy(state);
+//   if (snap.current === 'Top') {
+//     return (
+//       <div
+//         style={{
+//           display: snap.current ? 'block' : 'none',
+//           position: 'relative',
+//           top: '10px',
+//           left: '40px',
+//         }}
+//       >
+//         <h1>{snap.current}</h1>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Top}
+//             onClick={(color) => (state.items.Top = '#FC5A8D')}
+//           >
+//             <img src={optionStrawberry} data-option='Strawberry' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Top}
+//             onClick={(color) => (state.items.Top = '#F3E5AB')}
+//           >
+//             <img src={optionVanilla} data-option='Vanilla' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Top}
+//             onClick={(color) => (state.items.Top = '#F4BB44')}
+//           >
+//             <img src={optionMango} data-option='Mango' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Top}
+//             onClick={(color) => (state.items.Top = '#7B3F00')}
+//           >
+//             <img src={optionChoco} data-option='Choco' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Top}
+//             onClick={(color) => (state.items.Top = '#FFA500')}
+//           >
+//             <img src={optionOrange} data-option='Orange' />
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+//   if (snap.current === 'Base') {
+//     return (
+//       <div
+//         style={{
+//           display: snap.current ? 'block' : 'none',
+//           position: 'relative',
+//           top: '10px',
+//           left: '40px',
+//         }}
+//       >
+//         <h1>{snap.current}</h1>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Base}
+//             onClick={(color) => (state.items.Base = '#FC5A8D')}
+//           >
+//             <img src={optionStrawberry} data-option='Strawberry' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Base}
+//             onClick={(color) => (state.items.Base = '#F3E5AB')}
+//           >
+//             <img src={optionVanilla} data-option='Vanilla' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Base}
+//             onClick={(color) => (state.items.Base = '#F4BB44')}
+//           >
+//             <img src={optionMango} data-option='Mango' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Base}
+//             onClick={(color) => (state.items.Base = '#7B3F00')}
+//           >
+//             <img src={optionChoco} data-option='Choco' />
+//           </button>
+//         </div>
+//         <div
+//           class='options'
+//           style={{
+//             display: snap.current ? 'block' : 'none',
+//             position: 'relative',
+//             top: '10px',
+//             left: '40px',
+//           }}
+//         >
+//           <button
+//             color={snap.items.Base}
+//             onClick={(color) => (state.items.Base = '#FFA500')}
+//           >
+//             <img src={optionOrange} data-option='Orange' />
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+//   if (snap.current === 'Sprinkles') {
+//     return (
+//       <div
+//         style={{
+//           display: snap.current ? 'block' : 'none',
+//           position: 'relative',
+//           top: '20px',
+//           left: '500px',
+//         }}
+//       >
+//         <h1>{snap.current}</h1>
+//         <CirclePicker
+//           colors={[
+//             '#fff',
+//             '#abdee6',
+//             '#cbaacb',
+//             '#ffffb5',
+//             '#ffccb6',
+//             '#f3b0c3',
+//           ]}
+//           color={snap.items.Sprinkles}
+//           onChange={(color) => (state.items.Sprinkles = color.hex)}
+//         />
+//       </div>
+//     );
+//   }
+// }
 
 export default function Donut() {
   const dispatch = useDispatch();
   const history = useHistory();
   const snap = useProxy(state);
 
-  const configAddToCartBtn = {
-    type: 'button',
-  };
-
-  const handleAddToCart = (snap) => {
-    if (!snap) return;
-    dispatch(addProduct(snap));
-    history.push('/cart');
-  };
-
+  
+  
   return (
     <>
-      <Picker />
+      
       <Canvas>
         <ambientLight intensity={0.5} />
         <directionalLight intensity={1} position={[80, 80, 30]} castShadow />
@@ -553,9 +544,7 @@ export default function Donut() {
 
         <OrbitControls />
       </Canvas>
-      <Button {...configAddToCartBtn} onClick={() => handleAddToCart(snap)}>
-        Add to cart
-      </Button>
+      
 
       {/* <button onClick="Click()">Click me</button> */}
     </>

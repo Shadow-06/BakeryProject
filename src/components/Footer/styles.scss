@@ -1,7 +1,12 @@
 .footer {
-  .wrap {
-    max-width: 1450px;
-    padding: 20px 10px;
-    margin: 0 auto;
-  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(19, 18, 18);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px;
+  font-size: 12px;
 }
