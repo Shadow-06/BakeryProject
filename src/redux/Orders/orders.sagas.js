@@ -75,7 +75,7 @@ export function* saveOrder({ payload }) {
 }
 
 export function* onSaveOrderHistoryStart() {
-  debugger;
+  
   yield takeLatest(ordersTypes.SAVE_ORDER_HISTORY_START, saveOrder);
 }
 

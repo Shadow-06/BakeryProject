@@ -5,6 +5,9 @@ import {
 } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { setOrderDetails } from './../../redux/Orders/orders.actions';
+import { userError } from '../../redux/User/user.actions';
+import Order from '../../pages/Order';
+import  {useSelector} from "react"
 
 const columns = [
   {
@@ -41,10 +44,28 @@ const formatText = (columnName, columnValue) => {
   }
 }
 
+
+
 const OrderDetails = ({ order }) => {
   const dispatch = useDispatch();
   
-  const orderItems = order && order.orderItems;
+ 
+  
+  let orderItems = order && order.orderItems;
+
+  const configOrder=(order)=>
+  {
+    return order.documentID;
+    }
+      
+
+   
+
+
+
+  
+
+  
  
 
   useEffect(() => {
@@ -56,7 +77,6 @@ const OrderDetails = ({ order }) => {
   }, []);
 
   
-
   return (
     <TableContainer>
       <Table>
@@ -82,7 +102,9 @@ const OrderDetails = ({ order }) => {
 
           {(Array.isArray(orderItems) && orderItems.length > 0) && orderItems.map((row, pos) => {
             return (
-              <TableRow key={pos}>
+              <TableRow key={pos}
+              
+              onClick={() => configOrder(Order)} >
 
                 {columns.map((col, pos) => {
                   const columnName = col.id;

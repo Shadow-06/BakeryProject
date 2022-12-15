@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import FormInput from "./../forms/FormInput";
 import Button from "./../forms/Button";
-import { addProductStart, fetchProductsStart } from './../../redux/Products/products.actions';
+
 import { CountryDropdown } from "react-country-region-selector";
 import { apiInstance } from "./../../Utils";
 import {
@@ -90,97 +90,7 @@ const PaymentDetails = () => {
       return;
     }
 
-   
-
     
-    // const configOrder = {
-    //   customise:true,
-    //   orderTotal: total,
-    //   orderItems: cartItems.map((item) => {
-      
-    //     let customised= item.customise;
-    
-    //     debugger;
-    //     console.log("hello");
-    //     if(customised===true){
-    //       let {
-    //         customise,
-    //         items,
-    //         productThumbnail,
-    //         productName,
-    //         productPrice,
-    //         quantity,
-    //       } = item;
-
-    //       return {
-    //         customise,
-    //         items,
-    //         productThumbnail,
-    //         productName,
-    //         productPrice,
-    //         quantity,
-    //       };
-    //     }
-    //     let {
-    //       documentID,
-    //       productThumbnail,
-    //       productName,
-    //       productPrice,
-    //       quantity,
-    //     } = item;
-
-    //     return {
-    //       documentID,
-    //       productThumbnail,
-    //       productName,
-    //       productPrice,
-    //       quantity,
-    //     };
-    //   }),
-    // };
-
-    
-
-
-
-    // dispatch(saveOrderHistory(configOrder(Orders)));
- 
-
-    // const customOrder = cartItems.map((item) => {
-      
-    //     let customised= item.customise;
-    
-    //     debugger;
-    //     console.log("hello");
-    //     if(customised===true){
-    //       let {
-    //         customise,
-    //         items,
-    //         productThumbnail,
-    //         productName,
-    //         productPrice,
-    //         quantity,
-    //       } = item;
-
-    //       dispatch(
-    //         addProductStart({
-    //         customise,
-    //         items,
-    //         productThumbnail,
-    //         productName,
-    //         productPrice,
-    //         quantity,
-    //       }));
-    //     }
-        
-
-    //     return null;});
-    //   if(!customOrder===null){
-    // dispatch(
-    //   addProductStart(customOrder)
-        
-
-    // );}
     apiInstance
       .post("/payments/create", {
         amount: total * 100,
@@ -209,93 +119,18 @@ const PaymentDetails = () => {
                 payment_method: paymentMethod.id,
               })
               .then(({ paymentIntent }) => {
-                // const customisedProducts = cartItems.map((item) => {
-                //   let {
-                //     items,
-                //     customise,
-                //     productThumbnail,
-                //     productName,
-                //     productPrice,
-                //     quantity,
-                //   } = item;
-
-                //   if (customise) {
-                //     return {
-                //       items,
-                //       customise,
-                //       productThumbnail,
-                //       productName,
-                //       productPrice,
-                //       quantity,
-                //     };
-                //   }
-                //   return null;
-                // });
-                // console.log(customisedProducts);
-                //   if(!customisedProducts){
-                // dispatch(addProductStart(customisedProducts));}
-
                 
 
-                // const configOrder = {
-                //   orderTotal: total,
-                //   orderItems: cartItems.map((item) => {
-                  
-                //     let customised= item.customise;
-                
-                //     debugger;
-                //     console.log("hello");
-                //     if(customised===true){
-                //       let {
-                //         customise,
-                //         items,
-                //         productThumbnail,
-                //         productName,
-                //         productPrice,
-                //         quantity,
-                //       } = item;
-  
-                //       return {
-                //         customise,
-                //         items,
-                //         productThumbnail,
-                //         productName,
-                //         productPrice,
-                //         quantity,
-                //       };
-                //     }
-                //     let {
-                //       documentID,
-                //       productThumbnail,
-                //       productName,
-                //       productPrice,
-                //       quantity,
-                //     } = item;
-
-                //     return {
-                //       documentID,
-                //       productThumbnail,
-                //       productName,
-                //       productPrice,
-                //       quantity,
-                //     };
-                //   }),
-                // };
-                
-
-                
-                const configOrder=(Orders)=>{
-                  if (Orders){
-                    return   {
-                      customise:true,
+                const configOrder = (Orders) => {
+                  if (Orders) {
+                    return {
+                      customise: true,
                       orderTotal: total,
                       orderItems: cartItems.map((item) => {
-                      
-                        let customised= item.customise;
-                    
-                        debugger;
+                        let customised = item.customise;
+
                         console.log("hello");
-                        if(customised===true){
+                        if (customised === true) {
                           let {
                             customise,
                             items,
@@ -304,7 +139,7 @@ const PaymentDetails = () => {
                             productPrice,
                             quantity,
                           } = item;
-                
+
                           return {
                             customise,
                             items,
@@ -321,7 +156,7 @@ const PaymentDetails = () => {
                           productPrice,
                           quantity,
                         } = item;
-                
+
                         return {
                           documentID,
                           productThumbnail,
@@ -331,19 +166,15 @@ const PaymentDetails = () => {
                         };
                       }),
                     };
-                
                   }
-            
-                  return  {
-                    customise:true,
+
+                  return {
                     orderTotal: total,
                     orderItems: cartItems.map((item) => {
-                    
-                      let customised= item.customise;
-                  
-                      debugger;
+                      let customised = item.customise;
+
                       console.log("hello");
-                      if(customised===true){
+                      if (customised === true) {
                         let {
                           customise,
                           items,
@@ -352,7 +183,7 @@ const PaymentDetails = () => {
                           productPrice,
                           quantity,
                         } = item;
-              
+
                         return {
                           customise,
                           items,
@@ -369,7 +200,7 @@ const PaymentDetails = () => {
                         productPrice,
                         quantity,
                       } = item;
-              
+
                       return {
                         documentID,
                         productThumbnail,
@@ -379,12 +210,11 @@ const PaymentDetails = () => {
                       };
                     }),
                   };
-              
-            
-                }
-                
-                let Orders = cartItems.find(orders=>orders.customise == true)
+                };
 
+                let Orders = cartItems.find(
+                  (orders) => orders.customise == true
+                );
 
                 dispatch(saveOrderHistory(configOrder(Orders)));
               });

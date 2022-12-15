@@ -20,7 +20,7 @@ function Donut1(props) {
     const dispatch = useDispatch();
     const history = useHistory();
     const orderItems = order && order.orderItems;
-    const {Items} = orderItems
+    const Item = orderItems[1].items
 
   useEffect(() => {
 

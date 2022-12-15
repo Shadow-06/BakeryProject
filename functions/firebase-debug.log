@@ -598,3 +598,135 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2022-12-08T15:18:11.530Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
 [debug] [2022-12-08T15:18:11.531Z] [work-queue] {"queueLength":0,"workRunningCount":2}
 [info] i  functions: Finished "api" in 290.0054ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 290.0054ms"}}
+[debug] [2022-12-09T01:16:34.880Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-09T01:16:34.890Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-09T01:16:34.890Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-09T01:16:34.966Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-09T01:16:34.967Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-09T01:16:34.967Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-09T01:16:34.968Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-09T01:16:35.021Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-09T01:16:35.021Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 5.3889ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 5.3889ms"}}
+[debug] [2022-12-09T01:16:35.025Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2022-12-09T01:16:35.025Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2022-12-09T01:16:35.025Z] Accepted request POST /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-09T01:16:35.035Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-09T01:16:35.036Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-09T01:16:35.036Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[debug] [2022-12-09T01:16:35.036Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: BUSY"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-12-09T01:16:35.466Z] [worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-api-a546f805-1b99-48ad-bfe3-1092eff310ee]: IDLE"}}
+[debug] [2022-12-09T01:16:35.466Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[info] i  functions: Finished "api" in 412.8573ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"api\" in 412.8573ms"}}
+[debug] [2022-12-14T21:30:34.895Z] ----------------------------------------------------------------------
+[debug] [2022-12-14T21:30:34.897Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ramit\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2022-12-14T21:30:34.898Z] CLI Version:   11.18.0
+[debug] [2022-12-14T21:30:34.898Z] Platform:      win32
+[debug] [2022-12-14T21:30:34.898Z] Node Version:  v18.4.0
+[debug] [2022-12-14T21:30:34.904Z] Time:          Wed Dec 14 2022 16:30:34 GMT-0500 (Eastern Standard Time)
+[debug] [2022-12-14T21:30:34.904Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-14T21:30:34.908Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-14T21:30:35.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-14T21:30:35.047Z] > authorizing via signed-in user (ramithraveendran10@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-12-14T21:30:35.056Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-14T21:30:35.056Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-12-14T21:30:35.066Z] [hub] writing locator at C:\Users\ramit\AppData\Local\Temp\hub-dbakery-32b9f.json
+[debug] [2022-12-14T21:30:35.093Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-14T21:30:35.093Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-12-14T21:30:35.094Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[warn] !  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-12-14T21:30:35.141Z] defaultcredentials: writing to file C:\Users\ramit\AppData\Roaming\firebase\ramithraveendran10_gmail_com_application_default_credentials.json
+[debug] [2022-12-14T21:30:35.170Z] Setting GAC to C:\Users\ramit\AppData\Roaming\firebase\ramithraveendran10_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ramit\\AppData\\Roaming\\firebase\\ramithraveendran10_gmail_com_application_default_credentials.json"}}
+[debug] [2022-12-14T21:30:35.172Z] > refreshing access token with scopes: []
+[debug] [2022-12-14T21:30:35.174Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-14T21:30:35.175Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-14T21:30:35.203Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-14T21:30:35.203Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-12-14T21:30:35.307Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-14T21:30:35.307Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-14T21:30:35.312Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig [none]
+[debug] [2022-12-14T21:30:35.556Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig 200
+[debug] [2022-12-14T21:30:35.556Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dbakery-32b9f/adminSdkConfig {"projectId":"dbakery-32b9f","storageBucket":"dbakery-32b9f.appspot.com","locationId":"us-central"}
+[debug] [2022-12-14T21:30:35.589Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-12-14T21:30:35.590Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-12-14T21:30:35.590Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\ramit\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\ramit\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-12-14T21:30:35.744Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-12-14T21:30:35.744Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\ramit\OneDrive\BakeryProject\BakeryProject\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ramit\\OneDrive\\BakeryProject\\BakeryProject\\functions\" for Cloud Functions..."}}
+[debug] [2022-12-14T21:30:35.871Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-12-14T21:30:39.041Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.15.0",
+    "@stripe/stripe-js": "^1.44.1",
+    "axios": "^1.2.0",
+    "cors": "^2.8.5",
+    "expres": "^0.0.5",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "react-country-region-selector": "^3.6.1",
+    "stripe": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-12-14T21:30:39.041Z] Building nodejs source
+[debug] [2022-12-14T21:30:39.042Z] Analyzing nodejs backend spec
+[debug] [2022-12-14T21:30:39.043Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-12-14T21:30:39.608Z] Serving at port 9005
+
+[debug] [2022-12-14T21:30:39.857Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-12-14T21:30:39.870Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/dbakery-32b9f/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/dbakery-32b9f/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-12-15T03:23:43.808Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-12-15T03:23:43.817Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-12-15T03:23:43.821Z] Accepted request OPTIONS /dbakery-32b9f/us-central1/api/payments/create --> us-central1-api
+[debug] [2022-12-15T03:23:43.880Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-12-15T03:23:43.885Z] [functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/dbakery-32b9f/us-central1/api/payments/create, mapping to path=/payments/create"}}
+[debug] [2022-12-15T03:23:43.933Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2022-12-15T03:23:43.935Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
